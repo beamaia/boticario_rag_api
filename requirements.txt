@@ -19,3 +19,4 @@ sentence-transformers==3.4.1
 coloredlogs==15.0.1
 
 python-multipart==0.0.20
+pyyaml==6.0.2
