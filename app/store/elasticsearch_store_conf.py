@@ -24,7 +24,6 @@ class ElasticsearchStoreConf(ABC):
 
     def save_documents(self, documents):
         for i,doc in enumerate(documents):
-           print(i)
            self.vector_db.add_documents([doc])
 
     def retrieve(self, query):
@@ -37,6 +36,5 @@ class ElasticsearchStoreConf(ABC):
         )
 
         docs = compression_retriever.invoke(query)
-        print(docs)
         child_chunks = [doc.page_content for doc in docs]
         return child_chunks
