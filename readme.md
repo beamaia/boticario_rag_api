@@ -46,6 +46,8 @@ Initially (this maintains in the implementation), the document were to be broken
 For post-retrieval, since the document can be very long and consist of various informations that are all important. A [ContextualCompressionRetriever](https://python.langchain.com/docs/how_to/contextual_compression/) was added. In general, a chunk can consist of content that is important in part, but also have information that can act as noise. A compressior was choosen based on the survey [Searching for Best Practices in Retrieval-Augmented
 Generation](https://arxiv.org/pdf/2407.01219), weighing the pros-cons of summarization strategies (Topic 3.7). However, this needs to be better evaluated, for the additional cost might not be beneficial or could be unecessary given pre-retrieval strategies.
 
+![Example of retrieval request](artifacts/retrieve_request.png)
+
 ## Work in progress
 
 There are still various tasks needed for this MVP to be done. One crucial step is to test the chunk size and its impact in the full system. For that a few things need to be done prior:
@@ -54,8 +56,8 @@ There are still various tasks needed for this MVP to be done. One crucial step i
 - [ ] Test indexing bottle neck limit.
 - [ ] Create unit tests for code.
 - [ ] Create deployment workflow using green-blue environment.
-
-
+- [ ] Add architecture diagram.
+- [ ] Add LLM 
 
 ## References
 
