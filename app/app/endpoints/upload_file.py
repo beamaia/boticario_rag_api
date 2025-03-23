@@ -5,7 +5,7 @@ from datetime import datetime
 from fastapi import APIRouter, File, UploadFile, HTTPException
 import boto3
 
-from app.app.schema.upload_file import UploadFile
+from app.app.schema.upload_file import FileUpload
 from app.handler import ChunkSplitter
 from app.store import ElasticsearchStoreConf
 from app import config, logger
@@ -13,7 +13,7 @@ from app import config, logger
 router = APIRouter()
 s3_client = boto3.client('s3', )
 
-@router.post("/file_upload", response_model=UploadFile, tags=["UploadFile"])
+@router.post("/file_upload", response_model=FileUpload, tags=["UploadFile"])
 def upload(file: UploadFile = File(...)):
     content = file.file.read()
     file.file.seek(0)
