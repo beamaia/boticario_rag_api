@@ -22,7 +22,7 @@ In order to run the system locally, you can either use the Dockerfile provided o
 | Variable                 | Description |
 | :----------------------- | :------: |
 | AWS_REGION               |   AWS region with access to S3 bucket   | 
-| AWS_SECRET_ACCESS_ID     |   AWS secret access id with access to S3 bucket   | 
+| AWS_ACCESS_KEY_ID     |   AWS secret access id with access to S3 bucket   | 
 | AWS_SECRET_ACCESS_KEY    |  AWS secret access key with access to S3 bucket   | 
 | ELASTICSEARCH_URL | Elasticsearch vector URL |
 | ELASTICSEARCH_TIMEOUT | Max time for request timeout |
